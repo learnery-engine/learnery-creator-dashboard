@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px 24px',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    gap: 16,
+    gap: '1rem',
     alignSelf: 'stretch',
     borderRadius: 10,
     border: '1px solid #EAEAEA',
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   header: {
-    fontSize: 17,
+    fontSize: '1.06rem',
     fontFamily: 'Inter, sans-serif',
     fontStyle: 'normal',
     fontWeight: 600,

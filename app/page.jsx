@@ -1,10 +1,7 @@
 "use client"
 
 import React from "react";
-import Image from "next/image";
-import { Typography } from "@mui/material";
-import SimpleTitleTextContainer from '../components/SimpleTitleTextContainer';
-
+import Image from "next/image"
 
 export default function Home() {
   return (
