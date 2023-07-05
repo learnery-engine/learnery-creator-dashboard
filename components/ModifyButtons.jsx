@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FiRefreshCcw } from 'react-icons/fi';
 import { PiPencilSimpleLineThin, PiTrashLight } from 'react-icons/pi';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   buttonContainer: {
@@ -20,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 0,
+    color: grey
   },
   icons: {
-    width: 15,
-    height: 15,
+    width: '10px',
+    height: '10px',
+    color: grey
   },
 }));
 
