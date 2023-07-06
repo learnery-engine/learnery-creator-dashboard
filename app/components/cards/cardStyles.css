@@ -1,0 +1,282 @@
+/*Styles for Menu Component*/
+
+.menuLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menuRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-self: flex-end;
+  }
+  
+  .menuRight button {
+    margin-left: 10px;
+  }
+.menuTop {
+    width: 1728px;
+    height: 76px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}  
+.menuSaveDraft {
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    display: flex;
+    height: 40px;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+}
+.menuNext {
+    display: flex;
+    height: 40px;
+    padding: 10px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--button, radial-gradient(60.50% 100.00% at 49.59% 100.00%, #1EFF93 0%, #81D9FF 100%));
+}
+/*Styles for DescribeCourseCard component*/
+.descCourseParent .content-section {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+  }
+  
+  .descCourseParent  .left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px, 20px, 0px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    background: #FFF;
+    height: 100%;
+  }
+  
+  
+  
+  .descCourseParent .left-section .generateOutlineBtn {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  .descCourseParent .right-section {
+    display: flex;
+    width: 864px;
+    height: 1332px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccc;
+  }
+  
+  .descCourseParent .right-content {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .descCourseParent  #language {
+    display: flex;
+    width: 279px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+  }
+  
+  .descCourseParent  #category {
+    display: flex;
+    width: 279px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+  }
+  
+  
+  .descCourseParent #course-audience {
+    display: flex;
+    width: 279px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+  }
+  
+  .descCourseParent #tone {
+    display: flex;
+    width: 582px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+  }
+  
+  .descCourseParent  #courseHours {
+    display: flex;
+    width: 582px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+  }
+  .descCourseParent #lessonDuration {
+    display: flex;
+    width: 582px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-1, #EDEDED);
+    background: #FFF;
+  }
+  
+  .descCourseParent  #course-desc {
+    display: flex;
+    width: 582px;
+    height: 160px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  } 
+  
+  .descCourseParent .generateOutlineBtn {
+    display: flex;
+    width: 582px;
+    height: 48px;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--button, radial-gradient(60.50% 100.00% at 49.59% 100.00%, #1EFF93 0%, #81D9FF 100%));
+  }
+  .descCourseParent .form {
+    margin-top: 1em; 
+    width: 100%; 
+  }
+  
+  .descCourseParent .form-line {
+    margin-bottom: 1em; 
+  }
+  
+  .descCourseParent label {
+    margin-bottom: 0.5em; 
+  }
+  
+  .descCourseParent .form-line-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .descCourseParent  .form-line {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .descCourseParent {
+    width: 1728px;
+    height: 986px;
+    display: flex;
+    flex-direction: column; 
+  }
+  /* Styles for NewCourseCard component */
+  .newCourseParent {
+    background-color: #f8f8f8;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .newCourseParent .header {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .newCourseParent .imageBox {
+    height: 10em;
+    width: 10em; 
+    background-color: gray;
+  }
+  
+  .newCourseParent image {
+    max-height: 1.5em;
+    max-width: 1.5em;
+  }
+  .newCourseParent .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .newCourseParent .mini-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 1em;
+  }
+  
+  .newCourseParent .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  .newCourseParent  .active {
+    background-image: linear-gradient(to right, #64ffb5, #73e6ff);
+  }
+  .newCourseParent  button {
+    width: 8em;
+  }
+  .newCourseParent .form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+  }
