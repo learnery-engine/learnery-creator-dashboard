@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-export default function Card1() {
+export default function NewCourseCard() {
     return (
-        <div class="parent">
+        <div class="newCourseParent">
             <div class="header">
                 <h1>New Course</h1>
                 <p>How do you want to start?</p>
