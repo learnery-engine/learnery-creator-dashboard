@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 308px;
+    height: 100vh;
+  }
+
+
+  p{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 23.425px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33.464px;
+  }
+  
+  .first-div p {
+    text-align: center;
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-right: 100px;
+  }
+  
+  .second-div {
+    width: 100%;
+    margin-top: 73px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .second-div p {
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+
+  
+  .second-div p:first-child {
+    margin-right: auto;
+    padding-right: 140px;
+  }
+  
+  .second-div p:last-child {
+    margin-left: auto;
+    padding-left: 140px;
+  }
