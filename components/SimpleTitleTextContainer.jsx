@@ -4,15 +4,16 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { FiRefreshCcw } from 'react-icons/fi';
 import { PiPencilSimpleLineThin, PiTrashLight } from 'react-icons/pi';
-import ModifyButtons from './ModifyButtons'
+import ModifyButtons from './ModifyButtons';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
-    padding: '20px 24px',
+    padding: theme.spacing(3), // Adjust padding based on theme spacing
+    margin: theme.spacing(2), // Adjust margin based on theme spacing
     flexDirection: 'column',
     alignItems: 'flex-start',
-    gap: '1rem',
+    gap: theme.spacing(3), // Adjust gap based on theme spacing
     alignSelf: 'stretch',
     borderRadius: 10,
     border: '1px solid #EAEAEA',
@@ -25,14 +26,30 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: '0px 1px 1px 0px #37F6AE',
       border: '1px solid #37F6AE',
     },
+    // Responsive styles
+    [theme.breakpoints.between('lg', 'xl')]: {
+      width: 580, // Width set to 580px for the 1728px screen
+      height: `calc(3 / 4 * ${theme.spacing(10)})`, // 3/4 height based on theme spacing
+      padding: theme.spacing(2.25), // Adjust padding based on theme spacing
+      margin: theme.spacing(1.5), // Adjust margin based on theme spacing
+      gap: theme.spacing(2.25), // Adjust gap based on theme spacing
+    },
+    // Additional responsive styles
+    [theme.breakpoints.down('lg')]: {
+      width: 435, // Width set to 435px for the 1280px screen (3/4 of 580px)
+    },
   },
   header: {
-    fontSize: '1.06rem',
+    fontSize: '17px',
     fontFamily: 'Inter, sans-serif',
     fontStyle: 'normal',
     fontWeight: 600,
     lineHeight: '24px',
     color: 'var(--black, #151515)',
+    // Responsive styles
+    [theme.breakpoints.between('lg', 'xl')]: {
+      fontSize: '13px', // Reduce font size when screen width is between 1728px and 1280px
+    },
   },
   paragraph: {
     color: '#666',
@@ -42,17 +59,25 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     lineHeight: '18px',
     marginTop: theme.spacing(1),
+    // Responsive styles
+    [theme.breakpoints.between('lg', 'xl')]: {
+      fontSize: '10px', // Reduce font size when screen width is between 1728px and 1280px
+    },
   },
   buttonContainer: {
     display: 'flex',
     alignItems: 'flex-start',
-    gap: 12,
-    marginTop: theme.spacing(2),
+    gap: theme.spacing(2.25), // Adjust gap based on theme spacing
+    marginTop: theme.spacing(1),
+    // Responsive styles
+    [theme.breakpoints.between('lg', 'xl')]: {
+      marginTop: theme.spacing(0.75), // Adjust margin top based on theme spacing
+    },
   },
   circularButton: {
-    height: 28,
-    width: 28,
-    borderRadius: 28,
+    height: theme.spacing(3), // Adjust height based on theme spacing
+    width: theme.spacing(3), // Adjust width based on theme spacing
+    borderRadius: '50%',
     backgroundColor: '#FFF',
     border: '0.2px solid #666',
     display: 'flex',
@@ -61,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
   icons: {
-    width: 15,
-    height: 15,
+    width: theme.spacing(1.875), // Adjust width based on theme spacing
+    height: theme.spacing(1.875), // Adjust height based on theme spacing
   },
 }));
 
