@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function EditOutlineCard() {
+export default function MarkdownTableEditor() {
   const classes = useStyles();
   return (
     <div className={classes.outlineContainer}>
