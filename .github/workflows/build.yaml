@@ -1,15 +1,16 @@
-name: Deploy to GitHub Pages
+name: Build
 
 on:
   push:
     branches:
-      - main # Adjust the branch name as per your project setup
-      - "**" #FIXME: 
+      - 'main'
     paths:
       - '.github/workflows/deploy.yml'
     tags:
       - "*"
       - "**"
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 concurrency:
@@ -22,8 +23,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,14 +43,3 @@ jobs:
         run: |
           yarn build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.workspace }}/build
-          publish_branch: gh-pages
-          commit_message: ${{ github.event.head_commit.message }}
-          full_commit_message: ${{ github.event.head_commit.message }}
-          allow_empty_commit: true
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'

@@ -10,7 +10,7 @@ on:
     paths:
       - '.github/workflows/surge.yml'
 
-  pull_request: #FIXME: remove after testing
+  pull_request:
     branches: [ "main" ]
 
   workflow_dispatch:
