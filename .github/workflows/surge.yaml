@@ -25,13 +25,13 @@ defaults:
     working-directory: ./
     shell: bash
 
+env:
+  domain: learnery.surge.sh
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: surge
-
-    env:
-      domain: taskmon.surge.sh
 
     steps:
       - name: Checkout repository
