@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "deploy": "yarn build && surge ./build learnery.surge.sh "
+    "deploy": "yarn build && surge ./build learnery.surge.sh ",
+    "gh": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -31,6 +32,7 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.8",
     "vite": "^4.4.2"
