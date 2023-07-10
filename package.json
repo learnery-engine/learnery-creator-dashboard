@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "deploy": "yarn build && surge ./build learnery.surge.sh "
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
