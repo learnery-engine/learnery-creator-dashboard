@@ -3,13 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Adjust the branch name as per your project setup
-      - "**" #FIXME:
+      - main
     paths:
       - '.github/workflows/deploy.yml'
     tags:
       - "*"
       - "**"
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 concurrency:
