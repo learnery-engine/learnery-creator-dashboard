@@ -1,0 +1,80 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches:
+      - main
+      - "*"
+      - "**"
+    tags:
+      - '*'
+      - '**'
+    paths:
+      - '.github/workflows/surge.yml'
+
+  workflow_dispatch:
+
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: ./
+    shell: bash
+
+env:
+  domain: learnery.surge.sh
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: surge
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: 'yarn'
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
+      - name: Extract Domain
+        id: extract_domain
+        run: |
+          ref=$(git rev-parse --abbrev-ref HEAD)
+          sref=${ref//\//-}
+          echo "preview_domain=$sref-$domain" >> $GITHUB_OUTPUT
+
+      - name: Get working directory
+        id: wkdir
+        run: |
+          echo "wkdir=$(pwd)" >> $GITHUB_OUTPUT
+
+      - name: Preview to ${{ steps.extract_domain.outputs.preview_domain }}
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: ${{ steps.extract_domain.outputs.preview_domain }}
+          project: ${{ steps.wkdir.outputs.wkdir }}/build
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+
+      - name: Deploy to ${env.domain}
+        if:
+          ${{ startsWith(github.ref, 'refs/tags/') || github.ref ==
+          'refs/heads/main' }}
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: ${env.domain}
+          project: ${{ steps.wkdir.outputs.wkdir }}/build
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}

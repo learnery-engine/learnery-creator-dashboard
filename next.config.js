@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'build',
+  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   modularizeImports: {
@@ -7,6 +9,9 @@ const nextConfig = {
       transform: "@mui/icons-material/{{member}}",
     },
   },
+  experimental:{
+    appDir:true
+  }
 };
 
 module.exports = nextConfig;
