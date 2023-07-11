@@ -4,12 +4,9 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - '.github/workflows/deploy.yml'
     tags:
       - '*'
       - '**'
-
   workflow_dispatch:
 
 concurrency:
