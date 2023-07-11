@@ -3,7 +3,7 @@ name: Deploy to Surge
 on:
   push:
     branches:
-      - main
+      - "main"
       - "*"
       - "**"
     tags:
