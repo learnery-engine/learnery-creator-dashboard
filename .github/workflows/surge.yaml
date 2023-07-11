@@ -3,14 +3,12 @@ name: Deploy to Surge
 on:
   push:
     branches:
-      - 'main'
       - '*'
       - '**'
     tags:
       - '*'
       - '**'
-    paths:
-      - '.github/workflows/surge.yml'
+
   pull_request:
     branches: ['main']
   workflow_dispatch:
