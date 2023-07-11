@@ -3,12 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - "main"
+      - 'main'
     paths:
       - '.github/workflows/deploy.yml'
     tags:
-      - "*"
-      - "**"
+      - '*'
+      - '**'
 
   workflow_dispatch:
 
