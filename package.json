@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "deploy": "yarn build && surge ./build learnery.surge.sh ",
-    "gh": "gh-pages -d build"
+    "gh": "yarn build && gh-pages -d build"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
