@@ -3,17 +3,14 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Home() {
-
+const Lesson: React.FC = () => {
   return (
     <main>
-
-
       <div>
-        <h1>/create/ai/[id]/lesson/[id]</h1>
+        <h1>/create/ai/[id]/lesson/[lessonId]</h1>
       </div>
-
-
     </main>
   );
-}
+};
+
+export default Lesson;
