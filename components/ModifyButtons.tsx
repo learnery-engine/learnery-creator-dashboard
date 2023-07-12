@@ -1,51 +1,21 @@
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import { FiRefreshCcw } from 'react-icons/fi';
-// import { PiPencilSimpleLineThin, PiTrashLight } from 'react-icons/pi';
-// import { grey } from '@material-ui/core/colors';
+import React from 'react';
+import { FiRefreshCcw } from 'react-icons/fi';
+import { PiPencilSimpleLineThin, PiTrashLight } from 'react-icons/pi';
 
-// const useStyles = makeStyles((theme) => ({
-//   buttonContainer: {
-//     display: 'flex',
-//     alignItems: 'flex-start',
-//     gap: 12,
-//     marginTop: theme.spacing(2),
-//   },
-//   circularButton: {
-//     height: 28,
-//     width: 28,
-//     borderRadius: 28,
-//     backgroundColor: '#FFF',
-//     border: '0.2px solid #666',
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     padding: 0,
-//     color: grey
-//   },
-//   icons: {
-//     width: '10px',
-//     height: '10px',
-//     color: grey
-//   },
-// }));
+const ModifyButtons = () => {
+  return (
+    <div className="flex items-start gap-12 mt-2">
+      <button className="flex justify-center items-center h-28 w-28 rounded-full bg-white border border-gray-300 p-0 text-gray-500">
+        <FiRefreshCcw className="w-10 h-10 text-gray-500" />
+      </button>
+      <button className="flex justify-center items-center h-28 w-28 rounded-full bg-white border border-gray-300 p-0 text-gray-500">
+        <PiPencilSimpleLineThin className="w-10 h-10 text-gray-500" />
+      </button>
+      <button className="flex justify-center items-center h-28 w-28 rounded-full bg-white border border-gray-300 p-0 text-gray-500">
+        <PiTrashLight className="w-10 h-10 text-gray-500" />
+      </button>
+    </div>
+  );
+};
 
-// const ModifyButtons = () => {
-//   const classes = useStyles();
-
-//   return (
-//       <div className={classes.buttonContainer}>
-//         <button className={classes.circularButton}>
-//           <FiRefreshCcw className='classes.icons' />
-//         </button>
-//         <button className={classes.circularButton}>
-//           <PiPencilSimpleLineThin className='classes.icons' />
-//         </button>
-//         <button className={classes.circularButton}>
-//           <PiTrashLight className='classes.icons' />
-//         </button>
-//       </div>
-//   );
-// };
-
-// export default ModifyButtons;
+export default ModifyButtons;

@@ -1,110 +1,31 @@
-// import React from 'react';
-// import { Box, TextField, Typography } from '@mui/material';
-// import { makeStyles } from '@mui/material/styles';
-// import { FiRefreshCcw } from 'react-icons/fi';
-// import Divider from '@mui/material/Divider';
-// import { Theme } from '@mui/material/styles';
-// import SimpleTitleTextContainer from './SimpleTitleTextContainer';
+import React from 'react';
+import { FiRefreshCcw } from 'react-icons/fi';
+import SimpleTitleTextContainer from './SimpleTitleTextContainer';
 
-// const useStyles = makeStyles((theme: any) => ({
-//   wrapper: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     width: '100%',
-//     gap: '1rem',
-//     backgroundColor: '#fff'
-//   },
-//   listing: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     width: '100%',
-//     gap: '20px',
-//     backgroundColor: '#fff',
-//   },
-//   circularButton: {
-//     height: '23px',
-//     width: '23px',
-//     borderRadius: 28,
-//     backgroundColor: '#FFF',
-//     border: '0.2px solid #666',
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     padding: 0,
-//     color: '#666666'
-//   },
-//   container: {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     fontFamily: 'Inter, sans-serif',
-//     fontSize: '14px',
-//     fontWeight: 500,
-//     lineHeight: '20px',
-//     letterSpacing: '0em',
-//     textAlign: 'left',
-//     width: '100%'
-//   },
-//   icons: {
-//     width: '10px',
-//     height: '10px',
-//     color: '#666666'
-//   },
-//   searchInput: {
-//     width: '100%',
-//     height: '64px',
-//     boxShadow: '0px 1px 1px 0px #0000000A, 0px 8px 24px -8px #0000000A',
-//     borderRadius: '10px',
-//     border: '1px solid #EAEAEA',
+const VerticalContentCard: React.FC = () => {
+  const title = 'Title'; // Replace with your actual title
+  const text = 'Text'; // Replace with your actual text
 
-//     fontFamily: 'Inter, sans-serif',
-//     fontSize: '14px',
-//     fontWeight: 500,
-//     lineHeight: '20px',
-//     letterSpacing: '0em',
-//     textAlign: 'left',
-//   },
-//   placeholder: {
-//     color: '#EAEAEA',
-//     margin: '20px'
-//   },
-//   paragraph: {
-//     fontFamily: 'Inter, sans-serif',
-//     fontSize: '14px',
-//     fontWeight: 500,
-//     letterSpacing: '0em',
-//     textAlign: 'left',
-//     color: '#A8A8A8'
-//   },
-// }));
+  return (
+    <div className="flex flex-col w-full gap-1 bg-white">
+      <div className="flex justify-between items-center font-inter text-base font-medium leading-20">
+        <p className="text-gray-600">Select a title to continue</p>
+        <button className="flex items-center justify-center h-23 w-23 rounded-full bg-white border border-gray-400 p-0 text-gray-600">
+          <FiRefreshCcw className="w-10 h-10" />
+        </button>
+      </div>
+      <input
+        className="w-full h-64 px-4 py-2 rounded-lg border border-gray-200 shadow-sm text-base font-medium leading-20 text-left"
+        placeholder="    Enter your custom title"
+      />
+      <hr className="border-gray-200" />
+      <p className="font-inter text-base font-medium leading-20 text-gray-600">Suggested by AI</p>
+      <div className="flex flex-col w-full gap-20 bg-white">
+        {/* Insert SimpleTitleTextContainer here */}
+        <SimpleTitleTextContainer title={title} text={text} />
+      </div>
+    </div>
+  );
+};
 
-// const VerticalContentCard: React.FC = () => {
-//   const classes = useStyles();
-
-//   return (
-//     <div className={classes.wrapper}>
-//       <div className={classes.container}>
-//         <Typography style={{ color: '#666666' }} variant="body1">Select a title to continue</Typography>
-//         <button className={classes.circularButton}>
-//           <FiRefreshCcw className={classes.icons} />
-//         </button>
-//       </div>
-//       <input
-//         className={classes.searchInput}
-//         placeholder="    Enter your custom title"
-//         inputProps={{
-//           className: classes.placeholder,
-//         }}
-//       />
-//       <Divider />
-//       <Typography variant="body1" className={classes.paragraph}>
-//         Suggested by AI
-//       </Typography>
-//       <div className={classes.listing}>
-//         {/* Insert SimpleTitleTextContainer here */}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default VerticalContentCard;
+export default VerticalContentCard;
