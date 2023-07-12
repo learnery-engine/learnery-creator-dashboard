@@ -52,7 +52,9 @@ jobs:
           ref=$(git rev-parse --abbrev-ref HEAD)
           sref=${ref//\//-}
           echo "preview_domain=$sref-$domain" >> $GITHUB_OUTPUT
-
+          
+      - uses: lhotari/action-upterm@v1
+      
       - name: Get working directory
         id: wkdir
         run: |
