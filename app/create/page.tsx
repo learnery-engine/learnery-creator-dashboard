@@ -2,18 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
-import { Typography } from "@mui/material";
 
-export default function Home() {
+const Create: React.FC = () => {
   return (
     <main>
-
-
       <div>
         <h1>/create</h1>
       </div>
-
-
     </main>
   );
-}
+};
+
+export default Create;
