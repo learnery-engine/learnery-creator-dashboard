@@ -50,7 +50,7 @@ jobs:
         id: extract_domain
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            pr_number=${{ github.event.pull_request.number || github.event.issue.number }} || "latest"
+            pr_number=${{ github.event.pull_request.number || $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH") }} 
             domain="pr-$pr_number-${{ env.domain }}"
           elif [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" =~ ^refs/tags/(.*)$ ]]; then
             tag_version=$(echo "${{ github.ref }}" | sed -e "s/^refs\/tags\/v//")
