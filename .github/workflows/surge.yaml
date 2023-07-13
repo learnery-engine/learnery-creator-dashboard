@@ -61,8 +61,8 @@ jobs:
             sref=${ref//\//-}
             domain="$sref-${{ env.domain }}"
           fi
-          echo "preview_domain=$domain"
-          echo "preview_domain=$domain" >> $GITHUB_ENV
+          echo "preview_domain=$domain" 
+          echo "preview_domain=$domain" >> $GITHUB_OUTPUT
                 
       - name: Get working directory
         id: wkdir
