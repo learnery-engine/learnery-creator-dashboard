@@ -49,9 +49,18 @@ jobs:
       - name: Extract Domain
         id: extract_domain
         run: |
-          ref=$(git rev-parse --abbrev-ref HEAD)
-          sref=${ref//\//-}
-          echo "preview_domain=$sref-$domain" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            pr_number="${{ github.event.pull_request.number }}"
+            domain="pr-$pr_number-${{ env.domain }}"
+          elif [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" =~ ^refs/tags/(.*)$ ]]; then
+            tag_version=$(echo "${{ github.ref }}" | sed -e "s/^refs\/tags\/v//")
+            domain="tag-$tag_version-${{ env.domain }}"
+          else
+            ref=$(git rev-parse --abbrev-ref HEAD)
+            sref=${ref//\//-}
+            domain="$sref-${{ env.domain }}"
+          fi
+          echo "preview_domain=$domain" >> $GITHUB_ENV
           
       - uses: lhotari/action-upterm@v1
       
