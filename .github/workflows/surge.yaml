@@ -61,9 +61,7 @@ jobs:
             domain="$sref-${{ env.domain }}"
           fi
           echo "preview_domain=$domain" >> $GITHUB_ENV
-          
-      - uses: lhotari/action-upterm@v1
-      
+                
       - name: Get working directory
         id: wkdir
         run: |
